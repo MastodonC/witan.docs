@@ -11,7 +11,8 @@ This document will describe the minimum requirements for deploying a local versi
 
 ---------------------
 ## Prerequisites
-A UNIX-based operating system such as Ubuntu is required. We recommend [Ubuntu Server 14.04.3 (64 bit)](http://www.ubuntu.com/download/server/thank-you?country=GB&version=14.04.3&architecture=amd64). These installation instructions have been tested on this distribution using GNU bash 4.3.11.  
+A UNIX-based operating system such as Ubuntu is required. We recommend [Ubuntu Server 14.04.3 (64 bit)](http://www.ubuntu.com/download/server/thank-you?country=GB&version=14.04.3&architecture=amd64). These installation instructions have been tested on this distribution using GNU bash 4.3.11. Note that VMs will likely need at least 2GB memory.
+
 Ensure your package manager is up-to-date: 
 ```
 sudo apt-get update
@@ -26,10 +27,20 @@ sudo apt-get install openjdk-7-jdk
 #### Leiningen
 Leiningen is the tool we use to manage our source code and build Clojure projects. Install it using [these instructions](http://leiningen.org/).
 
+#### Docker
+We use Docker to isolate all the different microservices. Install is using [these instructions](https://docs.docker.com/engine/installation/).
+
 #### Cassandra
 Cassandra is the database we use to hold all of the application's data. Install it using [these instructions](http://docs.datastax.com/en/cassandra/2.0/cassandra/install/installDeb_t.html) (for Debian-based OSs).
 
-## Installing
+#### AWS Credentials
+Some of the files in Witan are stored on Amazon S3 and therefore you need an account and bucket set up and ready. Create environmental variables in the following fashion:
+```
+export WITAN_APP_AWS_KEY=<Your Amazon Key>
+export WITAN_APP_AWS_SECRET=<Your Amazon Secret>
+```
+
+## Installing & Compiling
 
 #### Obtain source code
 Download the source code for each of the projects from GitHub - this will require you to have [public SSH keys configured](https://help.github.com/articles/generating-ssh-keys/) *and* access to the `witan.r.models` repository ([contact us](theteam@mastodonc.com)).
@@ -64,5 +75,27 @@ Then checkout the correct tag and install it.
 ```
 cd witan.app
 lein uberjar
+./prepare-aws-creds
+cd ..
+```
+
+##### witan.ui
+This application provides the front end to Witan, using web technology. First we compile it, then we host it:
+
+```
+cd witan.ui
+./build_prod.sh
+sudo docker build -t witan.app .
+cd ..
+```
+
+## Running
+
+The application is now running. You should see output that looks similar to this:
+
+```
+Starting JettyServer
+14:52:09.698 INFO  o.e.j.s.Server  - jetty-7.x.y-SNAPSHOT
+14:52:09.726 INFO  o.e.j.s.AbstractConnector  - Started SelectChannelConnector@0.0.0.0:3000
 ```
 AWS creds?
