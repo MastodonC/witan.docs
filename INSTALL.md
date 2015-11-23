@@ -33,12 +33,14 @@ We use Docker to isolate all the different microservices. Install is using [thes
 #### Cassandra
 Cassandra is the database we use to hold all of the application's data. Install it using [these instructions](http://docs.datastax.com/en/cassandra/2.0/cassandra/install/installDeb_t.html) (for Debian-based OSs).
 
-#### AWS Credentials
-Some of the files in Witan are stored on Amazon S3 and therefore you need an account and bucket set up and ready. Create environmental variables in the following fashion:
+#### AWS Configuration
+Some of the files in Witan are stored on Amazon S3 and therefore you need an account set up and ready. Create environmental variables in the following fashion:
 ```
 export WITAN_APP_AWS_KEY=<Your Amazon Key>
 export WITAN_APP_AWS_SECRET=<Your Amazon Secret>
 ```
+
+You will also need a bucket called `witan-test-data` (if you use a different name you need to change the configuration for `witan.app`).
 
 ## Installing & Compiling
 
@@ -71,25 +73,34 @@ This application handles communication to the database and provides an API.
 ```
 grep -Eo "witan.models \"([0-9+]\.[0-9+]\.[0-9+])\"" witan.app/project.clj | cut -d\" -f2 > model_number
 ```
-Then checkout the correct tag and install it.
+Then checkout the correct tag, compile it and package it.
 ```
 cd witan.app
 lein uberjar
 ./prepare-aws-creds
-cd ..
-```
-
-##### witan.ui
-This application provides the front end to Witan, using web technology. First we compile it, then we host it:
-
-```
-cd witan.ui
-./build_prod.sh
 sudo docker build -t witan.app .
 cd ..
 ```
+Note we're using the `dev.witan-app.edn` configuration because our Cassandra is local.
+
+##### witan.ui
+This application provides the front end to Witan, using web technology. First we compile it, then we package it:
+```
+cd witan.ui
+./build_prod.sh
+sudo docker build -t witan.ui .
+cd ..
+```
+
+
+--net=host <<<< --- witan.app run ?? doesn't work
 
 ## Running
+
+Start witan.ui:
+```
+sudo docker run -d -p 80:80 -e NGINX_SERVER_ADDR=localhost witan.ui
+```
 
 The application is now running. You should see output that looks similar to this:
 
