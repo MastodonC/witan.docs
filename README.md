@@ -10,6 +10,10 @@ We’re on a mission to help you, the professionals, to build better cities. The
 1. [Installation instructions for Witan](INSTALL.md)
 2. [User Guide for Witan](GUIDE.md)
 
+## References
+http://witan.mastodonc.com
+http://data.london.gov.uk/blog/an-update-on-witan-the-flexible-city-modelling-platform/
+
 ## Contact
 Witan was built and is maintained by Mastodon C.  
 Website: mastodonc.com  
