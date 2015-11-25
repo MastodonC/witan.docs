@@ -11,27 +11,27 @@ This document will describe the minimum requirements for deploying a local versi
 
 ---------------------
 ## Prerequisites
-A UNIX-based operating system such as Ubuntu is required. We recommend [Ubuntu Server 14.04.3 (64 bit)](http://www.ubuntu.com/download/server/thank-you?country=GB&version=14.04.3&architecture=amd64). These installation instructions have been tested on this distribution using GNU bash 4.3.11. Note that VMs will likely need at least 2GB memory.
+A UNIX-based operating system such as Ubuntu is required. We recommend [Ubuntu Server 15.04.3 (64 bit)](http://www.ubuntu.com/download/server/thank-you?country=GB&version=15.04.3&architecture=amd64). These installation instructions have been tested on this distribution with GNU bash 4.3.11. Note that VMs will likely need at least 3GB memory.
 
 Ensure your package manager is up-to-date: 
 ```
 sudo apt-get update
 ```
 
-#### Java
-As we'll be handling source code we need to install the Java Development Kit (JDK). In this case, OpenJDK 7.
+#### Java (v1.8)
+As we'll be handling source code we need to install the Java Development Kit (JDK).
 ```
-sudo apt-get install openjdk-7-jdk
+sudo apt-get install openjdk-8-jdk -y
 ```
 
-#### Leiningen
-Leiningen is the tool we use to manage our source code and build Clojure projects. Install it using [these instructions](http://leiningen.org/).
+#### Leiningen (v2.x)
+Leiningen is the tool we use to manage our source code and build Clojure projects. Install it using [these instructions](http://leiningen.org/). Run `lein` to confirm the install worked.
 
-#### Docker
-We use Docker to isolate all the different microservices. Install is using [these instructions](https://docs.docker.com/engine/installation/).
+#### Docker (v1.9)
+We use Docker to isolate all the different microservices. Install it using [these instructions](https://docs.docker.com/engine/installation/). Run `sudo docker ps` to confirm the install worked and the service is running.
 
-#### Cassandra
-Cassandra is the database we use to hold all of the application's data. Install it using [these instructions](http://docs.datastax.com/en/cassandra/2.0/cassandra/install/installDeb_t.html) (for Debian-based OSs).
+#### Cassandra (v2.2.1)
+Cassandra is the database we use to hold all of the application's data. Install it using [these instructions](http://docs.datastax.com/en/cassandra/2.0/cassandra/install/installDeb_t.html) (for Debian-based OSs). Run `cqlsh` to confirm the install worked and the service is running.
 
 #### AWS Configuration
 Some of the files in Witan are stored on Amazon S3 and therefore you need an account set up and ready. Create environmental variables in the following fashion:
@@ -48,7 +48,7 @@ You will also need a bucket called `witan-test-data` (if you use a different nam
 Download the source code for each of the projects from GitHub - this will require you to have [public SSH keys configured](https://help.github.com/articles/generating-ssh-keys/) *and* access to the `witan.r.models` repository ([contact us](theteam@mastodonc.com)).
 
 ```
-sudo apt-get install git
+sudo apt-get install git -y
 git clone git@github.com:MastodonC/witan.app.git
 git clone git@github.com:MastodonC/witan.ui.git
 git clone git@github.com:MastodonC/witan.r.models.git
@@ -66,47 +66,48 @@ cd witan.r.models
 echo tags/$(cat ../model_number) | xargs git checkout
 lein install
 cd ..
+rm model_number
 ```
 
 ##### witan.app
-This application handles communication to the database and provides an API.
-```
-grep -Eo "witan.models \"([0-9+]\.[0-9+]\.[0-9+])\"" witan.app/project.clj | cut -d\" -f2 > model_number
-```
-Then checkout the correct tag, compile it and package it.
+This application handles communication to the database and provides an API. Prepare it with the following commands (ignore the error "Cannot drop non existing keyspace 'witan'").
 ```
 cd witan.app
-lein uberjar
+cqlsh -f cql/dev-schema.cql
 ./prepare-aws-creds
-sudo docker build -t witan.app .
+lein uberjar
 cd ..
 ```
-Note we're using the `dev.witan-app.edn` configuration because our Cassandra is local.
 
 ##### witan.ui
 This application provides the front end to Witan, using web technology. First we compile it, then we package it:
 ```
 cd witan.ui
+export WITAN_API_URL=http://localhost:3000
 ./build_prod.sh
 sudo docker build -t witan.ui .
 cd ..
 ```
 
-
---net=host <<<< --- witan.app run ?? doesn't work
-
 ## Running
+
+Start witan.app:
+```
+java -jar witan.app/target/witan-app.jar &
+```
+
+Wait for a log line to be shown, similar to:
+
+```
+13:22:36.317 INFO  o.e.j.s.Server  - jetty-7.x.y-SNAPSHOT
+13:22:36.364 INFO  o.e.j.s.AbstractConnector  - Started SelectChannelConnector@0.0.0.0:3000
+```
 
 Start witan.ui:
 ```
 sudo docker run -d -p 80:80 -e NGINX_SERVER_ADDR=localhost witan.ui
 ```
 
-The application is now running. You should see output that looks similar to this:
+Visit `http://localhost` in your browser and you should see the Witan login page.
 
-```
-Starting JettyServer
-14:52:09.698 INFO  o.e.j.s.Server  - jetty-7.x.y-SNAPSHOT
-14:52:09.726 INFO  o.e.j.s.AbstractConnector  - Started SelectChannelConnector@0.0.0.0:3000
-```
-AWS creds?
+
