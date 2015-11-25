@@ -11,7 +11,7 @@ This document will describe the minimum requirements for deploying a local versi
 
 ---------------------
 ## Prerequisites
-A UNIX-based operating system such as Ubuntu is required. We recommend [Ubuntu Server 15.04.3 (64 bit)](http://www.ubuntu.com/download/server/thank-you?country=GB&version=15.04.3&architecture=amd64). These installation instructions have been tested on this distribution with GNU bash 4.3.11. Note that VMs will likely need at least 3GB memory.
+A UNIX-based operating system such as Ubuntu is required. We recommend [Ubuntu Server 15.04.3 (64 bit)](http://www.ubuntu.com/download/server/thank-you?country=GB&version=15.04.3&architecture=amd64). These installation instructions have been tested on this distribution with GNU bash 4.3.30. Note that VMs will likely need at least 3GB memory.
 
 Ensure your package manager is up-to-date: 
 ```bash
