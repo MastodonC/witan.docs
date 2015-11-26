@@ -51,13 +51,31 @@ Once all the required inputs are filled, selecting the 'Create' but should take 
 The Projection view has three parts to it which are navigated using the large gray buttons near the top of the page:
 
 #### Inputs
-![Projection - Input](imgs/projection00.png)  
+![Projection - Inputs](imgs/projection00.png)  
 The Inputs page displays a list of Input *Categories*, which is defined by the Model to describe a particular item of Input Data that the Model needs in order to run. Sometimes 'default' Data will be selected and other times, as in the image, the Model requires Data to be specified in order to run.
 
 Clicking on the blue button will display the Data selection form for that category.
 
-![Projection - Input, data selection](imgs/projection03.png) 
+![Projection - Inputs, data selection](imgs/projection03.png) 
 
+From here there are two options; either select an existing Data item from the items listed (and confirm with the 'Use' button), or *upload* a new Data item. It's also possible to download an existing Data item, for use as a template or reference, by selecting it and then using the 'Download' button.
 
+#### Model
+![Projection - Model](imgs/projection01.png)  
+The Model page displays information about the selected model, including a list of the Model Properties that were chosen when the Projection was created.
+```html
+ALPHA: Once a Projection is created, Model Properties cannot be adjusted. This is temporary and eventually they will be configurable.
+```
 
+#### Outputs
+![Projection - Outputs](imgs/projection02.png)  
+The Outputs page displays a list of the results that were generated the last time the Model was run. If, as in the image, the Model has yet to be run - or if it's currently being run and is 'In Progress' - then a helpful message is displayed.
 
+Once the Model has been run, each Output is listed and download buttons with the relevant file types are displayed (e.g. "CSV", "XLSX"). 
+
+## Running a Projection
+It's often the case that after creating a new Projection, Data items are required before it can be run. These are clearly indicated by the red lettering - "No data input specified" - beneath an Input Category description. Once all Input Categories have appropriate Data items selected *or* there has been a change - a different Data item has been selected since the last run - a new dialog will appear:
+
+![Projection - Model](imgs/projection04.png)  
+
+This presents two options; either to revert the changes that have been made to the Projection ("Revert")
