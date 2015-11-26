@@ -18,3 +18,7 @@ We’re on a mission to help you, the professionals, to build better cities. The
 Witan was built and is maintained by Mastodon C.  
 Website: mastodonc.com  
 Email: theteam@mastodonc.com
+
+Copyright © 2014 Mastodon C
+
+Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
