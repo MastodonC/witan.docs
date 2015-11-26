@@ -115,7 +115,7 @@ Before you can use Witan you'll need to add a user. First access the Witan conso
 ```bash
 lein repl :connect 5001
 ```
-Once connected, type the following commands, relacing the name, email (username) and password for something appropriate:
+Once connected, type the following commands, replacing the name, email (username) and password for something appropriate:
 ```clojure
 (in-ns 'witan.app.user)
 (add-user! {:name "Test User" :username "foo@bar.com" :password "secret"})
