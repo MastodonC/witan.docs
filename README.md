@@ -19,6 +19,6 @@ Witan was built and is maintained by Mastodon C.
 Website: mastodonc.com  
 Email: theteam@mastodonc.com
 
-Copyright © 2014 Mastodon C
+Copyright © 2015 Mastodon C
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
