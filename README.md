@@ -21,4 +21,4 @@ Email: theteam@mastodonc.com
 
 Copyright © 2014 Mastodon C
 
-Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
+This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
