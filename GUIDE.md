@@ -48,8 +48,16 @@ Some Models have properties that you need to set. For example, in the image, the
 Once all the required inputs are filled, selecting the 'Create' but should take you to the page for your newly created Projection.
 
 ## Projection
+The Projection view has three parts to it which are navigated using the large gray buttons near the top of the page:
+
+#### Inputs
 ![Projection - Input](imgs/projection00.png)  
-The Projection page has three parts to it which are navigated :
+The Inputs page displays a list of Input *Categories*, which is defined by the Model to describe a particular item of Input Data that the Model needs in order to run. Sometimes 'default' Data will be selected and other times, as in the image, the Model requires Data to be specified in order to run.
+
+Clicking on the blue button will display the Data selection form for that category.
+
+![Projection - Input, data selection](imgs/projection03.png) 
+
 
 
 
