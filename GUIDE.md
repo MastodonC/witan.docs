@@ -5,7 +5,7 @@ Witan is a tool for planners and policy makers to help form a better understandi
 ---------------------
 ## Prerequisites
 * A login is required for Witan. Currently, the best way to obtain one is to [contact us](theteam@mastodonc.com) and we can facilitate, or alternatively, ask a manager.
-* ***Please understand that Witan is currently in an ALPHA state and is prone to glitches and bugs. If you encounter such an event, please [contact us](theteam@mastodonc.com) and let us know what happened.***
+* ***Please understand that Witan is currently in a state of development and is prone to glitches and bugs. If you encounter anything unusual, please [contact us](theteam@mastodonc.com) and let us know what happened.***
 
 ## Signing in
 ![Witan login](imgs/login00.png)
@@ -22,7 +22,7 @@ Data is the foundation substance of Witan and can represent a vast array of diff
 * *Uploaded and used as an* ***Input*** *for a Projection*
 * *Produced as an* ***Output*** *(result) *from a Projection*.
 ```html
-ALPHA: We only accept uploads in CSV format and projections will only output CSVs.
+Whilst in early development, Witan only accepts uploads in CSV format and Projections will only output CSVs.
 ```
 
 #### Models
@@ -64,7 +64,7 @@ From here there are two options; either select an existing Data item from the it
 ![Projection - Model](imgs/projection01.png)  
 The Model page displays information about the selected model, including a list of the Model Properties that were chosen when the Projection was created.
 ```html
-ALPHA: Once a Projection is created, Model Properties cannot be adjusted. This is temporary and eventually they will be configurable.
+Once a Projection is created, Model Properties cannot be adjusted. This is temporary and eventually they will be configurable.
 ```
 
 #### Outputs
