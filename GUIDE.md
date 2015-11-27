@@ -19,14 +19,14 @@ Witan pivots around a core set of primitives which should be familiar to most pe
 
 #### Data
 Data is the foundation substance of Witan and can represent a vast array of different information, from statistics to sensor outputs. Data can enter the system in one of two ways: 
-* *Uploaded and used as an **Input** for a Projection*
-* *Produced as an **Output** (result) from a Projection*.
+* *Uploaded and used as an* ***Input*** *for a Projection*
+* *Produced as an* ***Output*** *(result) *from a Projection*.
 ```html
 ALPHA: We only accept uploads in CSV format and projections will only output CSVs.
 ```
 
 #### Models
-Models represent the transformation process under which Data is processed in the pursuit of a particular outcome. For example, given an *Input* of a city's population figures a Model could manipulate those figures using a particular assumption about migration, to predict growth over the next 10 years. A different Model could use a different assumption, or could focus on an entirely different prediction altogether.  
+Models represent the transformation process under which Data is processed in the pursuit of a particular outcome. For example, given an *Input* of a city's population figures, a Model could manipulate those figures using particular assumption about migration to predict growth over the next 10 years. A different Model could use a different assumption, or could focus on an entirely different prediction altogether.  
 
 #### Projections
 In Witan we use the term 'Projection' as an umbrella term to refer to the combination of a Model, it's configuration, a fixed set of Input Data and the resulting Output Data. We use this term because when thinking about a projection, in city planning terms, all of these parts are important to consider when evaluating the results. 
@@ -43,7 +43,7 @@ An additional description for the Projection.
 ##### Model
 The name and version of the Model to use.
 ##### Model Properties
-Some Models have properties that require setting. For example, in the image, the 'DCLG-based Housing Linked Model' requires that a London borough is selected.
+Some Models have properties that require setting. For example, in the image, the 'DCLG-based Housing Linked Model' requires a London borough to be selected.
 
 Once all the required inputs are filled, selecting the 'Create' will cause the application to load the newly created Projection.
 
@@ -52,7 +52,7 @@ The Projection view has three parts to it which are navigated using the large gr
 
 #### Inputs
 ![Projection - Inputs](imgs/projection00.png)  
-The Inputs page displays a list of Input *Categories*, which is defined by the Model to describe a particular item of Input Data that the Model needs in order to run. Sometimes 'default' Data will be selected and other times, as in the image, the Model requires Data to be specified in order to run.
+The Inputs page displays a list of Input *Categories*, which are defined by the Model to describe a particular item of Data that the Model needs in order to run. Beneath the category description, the name of the currently configured Data item is displayed. Sometimes 'default' Data will be selected and other times, as in the image, the Model requires Data to be specified in order to run.
 
 Clicking on the blue button will display the Data selection form for that category.
 
@@ -82,7 +82,7 @@ This presents two options; either to revert the changes that have been made to t
 
 ![Projection - In Progress](imgs/projection05.png)  
 
-Depending on the Model, it could take a few minutes to generate the Outputs. During this time the Projection will appear as "In Progress" and any further changes will be prevented until it's ready. Once the Outputs are ready the page should automatically update and items will now be available on the Outputs page.
+Depending on the Model, it could take a few minutes to generate the Outputs. During this time the Projection will appear as "In Progress" and any further changes will be prevented until it has completed. Once the Outputs are ready the page should automatically update and items will now be available on the Outputs page.
 
 ![Projection - Outputs](imgs/projection06.png)  
 
