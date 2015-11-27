@@ -76,6 +76,14 @@ Once the Model has been run, each Output is listed and download buttons with the
 ## Running a Projection
 It's often the case that after creating a new Projection, Data items are required before it can be run. These are clearly indicated by the red lettering - "No data input specified" - beneath an Input Category description. Once all Input Categories have appropriate Data items selected *or* there has been a change - a different Data item has been selected since the last run - a new dialog will appear:
 
-![Projection - Model](imgs/projection04.png)  
+![Projection - Running](imgs/projection04.png)  
 
-This presents two options; either to revert the changes that have been made to the Projection ("Revert")
+This presents two options; either to revert the changes that have been made to the Projection ("Revert changes") or to run the Projection ("Run this projection"). Selecting the latter will cause the Projection to 'lock in' all of the Data items and Model Properties and perform a full run of the Model with these settings. A new version of the Projection has now been created and the application will automatically update to display it.
+
+![Projection - In Progress](imgs/projection05.png)  
+
+Depending on the Model, it could take a few minutes to generate the Outputs. During this time the Projection will appear as "In Progress" and you'll be unable to make any further changes until it's ready. Once the Outputs are ready the page should automatically update and items will now be available on the Outputs page.
+
+![Projection - Outputs](imgs/projection06.png)  
+
+Now the Outputs can be downloaded via the appropriate file-format buttons. Any subsequent changes to Data items, on the Inputs page, will cause a new version of the Projection and the Model to re-run.
