@@ -4,16 +4,16 @@ Witan is a tool for planners and policy makers to help form a better understandi
 
 ---------------------
 ## Prerequisites
-* You require a login for Witan. Currently, the best way to obtain one is to [contact us](theteam@mastodonc.com) and we can facilitate, or alternatively, ask your manager.
+* A login is required for Witan. Currently, the best way to obtain one is to [contact us](theteam@mastodonc.com) and we can facilitate, or alternatively, ask a manager.
 * ***Please understand that Witan is currently in an ALPHA state and is prone to glitches and bugs. If you encounter such an event, please [contact us](theteam@mastodonc.com) and let us know what happened.***
 
 ## Signing in
 ![Witan login](imgs/login00.png)
-Enter your email address and password and press 'Sign In'. If you've lost your password, click the 'forgotten password' link and it will allow you to send us an email message, asking for your password to be reset.
+Enter an email address and password and press 'Sign In'. In the case of a lost password, click the 'forgotten password' link and it will send us an email message, asking for the password to be reset.
 
 ## Dashboard
 ![Witan dashboard](imgs/dash00.png)
-After signing in you will see a dashboard which lists all of the *Projections* that you have access to.
+The Dashboard displays a list of all the accessible *Projections*.
 
 Witan pivots around a core set of primitives which should be familiar to most people who've worked in city planning:
 
@@ -32,20 +32,20 @@ Models represent the transformation process under which Data is processed in the
 In Witan we use the term 'Projection' as an umbrella term to refer to the combination of a Model, it's configuration, a fixed set of Input Data and the resulting Output Data. We use this term because when thinking about a projection, in city planning terms, all of these parts are important to consider when evaluating the results. 
 
 ## Creating a Projection
-It's likely that when you first encounter the Dashboard, it will be empty. To create a Projection, click on the green `+` button in the top-right corner. You should see the following screen:  
+It's likely that when during the first encounter the Dashboard, it will be empty. To create a Projection, click on the green `+` button in the top-right corner. The following view will become available:
 ![Witan create a projection](imgs/create00.png)  
 
 Fill in the details:
 ##### Name
-A descriptive name for your Projections, e.g. Housing Projection for Camden
+A descriptive name for the Projections, e.g. Housing Projection for Camden
 ##### Description
-An additional description for the Projection. You could include justifications or contact details.
+An additional description for the Projection.
 ##### Model
-The name and version of the Model you want to use.
+The name and version of the Model to use.
 ##### Model Properties
-Some Models have properties that you need to set. For example, in the image, the 'DCLG-based Housing Linked Model' prompts you to select a London borough.
+Some Models have properties that require setting. For example, in the image, the 'DCLG-based Housing Linked Model' requires that a London borough is selected.
 
-Once all the required inputs are filled, selecting the 'Create' but should take you to the page for your newly created Projection.
+Once all the required inputs are filled, selecting the 'Create' will cause the application to load the newly created Projection.
 
 ## Projection
 The Projection view has three parts to it which are navigated using the large gray buttons near the top of the page:
@@ -82,7 +82,7 @@ This presents two options; either to revert the changes that have been made to t
 
 ![Projection - In Progress](imgs/projection05.png)  
 
-Depending on the Model, it could take a few minutes to generate the Outputs. During this time the Projection will appear as "In Progress" and you'll be unable to make any further changes until it's ready. Once the Outputs are ready the page should automatically update and items will now be available on the Outputs page.
+Depending on the Model, it could take a few minutes to generate the Outputs. During this time the Projection will appear as "In Progress" and any further changes will be prevented until it's ready. Once the Outputs are ready the page should automatically update and items will now be available on the Outputs page.
 
 ![Projection - Outputs](imgs/projection06.png)  
 
