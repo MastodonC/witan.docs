@@ -17,7 +17,7 @@ We’re on a mission to help you, the professionals, to build better cities. The
 ## Contact
 Witan was built and is maintained by Mastodon C.  
 Website: mastodonc.com  
-Email: theteam@mastodonc.com
+Email: witan@mastodonc.com
 
 Copyright © 2015 Mastodon C Ltd
 
