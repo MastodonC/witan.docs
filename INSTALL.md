@@ -7,7 +7,7 @@ Witan is almost entirely written in [Clojure](http://clojure.org/) and [ClojureS
 | witan.ui       | https://github.com/mastodonc/witan.ui        | Front end                                                      |
 | witan.r.models | https://github.com/mastodonc/witan.r.models  | Mathematical models used in creating forecasts and projections |
 
-This document will describe the minimum requirements for deploying a local version of Witan. It is not recommended that you use this set-up for production - for advice and guidance regarding production deployments, please [contact us](theteam@mastodonc.com).  
+This document will describe the minimum requirements for deploying a local version of Witan. It is not recommended that you use this set-up for production - for advice and guidance regarding production deployments, please [contact us](witan@mastodonc.com).  
 
 ---------------------
 ## Prerequisites
@@ -45,7 +45,7 @@ You will also need a bucket called `witan-test-data` (if you use a different nam
 ## Installing & Compiling
 
 #### Obtain source code
-Download the source code for each of the projects from GitHub - this will require you to have [public SSH keys configured](https://help.github.com/articles/generating-ssh-keys/) *and* access to the `witan.r.models` repository ([contact us](theteam@mastodonc.com)).
+Download the source code for each of the projects from GitHub - this will require you to have [public SSH keys configured](https://help.github.com/articles/generating-ssh-keys/) *and* access to the `witan.r.models` repository ([contact us](witan@mastodonc.com)).
 
 ```bash
 sudo apt-get install git -y
