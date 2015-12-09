@@ -74,10 +74,15 @@ rm model_number
 This application handles communication to the database and provides an API. Prepare it with the following commands (ignore the error "Cannot drop non existing keyspace 'witan'").
 ```bash
 cd witan.app
-cqlsh -f cql/dev-schema.cql
 ./prepare-aws-creds
 lein uberjar
 cd ..
+```
+To load the cassandra schema, in the clojure repl:
+```clojure
+(require '[db-setup :refer [load-db-schema!]])
+(require '[witan.app.config :as c])
+(load-db-schema! c/config)
 ```
 
 ##### witan.ui
