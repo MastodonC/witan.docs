@@ -75,14 +75,9 @@ This application handles communication to the database and provides an API. Prep
 ```bash
 cd witan.app
 ./prepare-aws-creds
+./load-db-schema.sh
 lein uberjar
 cd ..
-```
-To load the cassandra schema, in the clojure repl:
-```clojure
-(require '[db-setup :refer [load-db-schema!]])
-(require '[witan.app.config :as c])
-(load-db-schema! c/config)
 ```
 
 ##### witan.ui
