@@ -74,8 +74,8 @@ rm model_number
 This application handles communication to the database and provides an API. Prepare it with the following commands (ignore the error "Cannot drop non existing keyspace 'witan'").
 ```bash
 cd witan.app
-cqlsh -f cql/dev-schema.cql
 ./prepare-aws-creds
+./load-db-schema.sh
 lein uberjar
 cd ..
 ```
