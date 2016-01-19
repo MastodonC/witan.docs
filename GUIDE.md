@@ -1,5 +1,5 @@
 # User Guide for Witan
-#### Current Version: MVP 1
+#### Current Version: MVP 1.1
 Witan is a tool for planners and policy makers to help form a better understanding of the data that drives their city.
 
 ---------------------
@@ -10,7 +10,7 @@ Witan is a tool for planners and policy makers to help form a better understandi
 Enter an email address and password and press 'Sign In'. In the case of a lost password, click the 'forgotten password' link and it will send us an email message, asking for the password to be reset.
 
 ## Signing up
-![Witan signup](imgs/login01.png)
+![Witan signup](imgs/login01.png)  
 If you don't already have an account then you'll first need an invite code. These can be obtained by [emailing us](mailto:witan@mastodonc.com). Access is limited so you may be unable to receive a code straight-away. Once you do have an invite code, use the 'Create Account' button from the landing page to navigate to the correct screen. Enter your details (work email address, name and password) and create your account. You will be logged in immediately.
 
 ## Dashboard
@@ -89,3 +89,10 @@ Depending on the Model, it could take a few minutes to generate the Outputs. Dur
 ![Projection - Outputs](imgs/projection06.png)  
 
 Now the Outputs can be downloaded via the appropriate file-format buttons. Any subsequent changes to Data items, on the Inputs page, will cause a new version of the Projection and the Model to re-run.
+
+## Getting Help
+![Intercom logo](imgs/intercom00.png)  
+At any time you see this icon you can click it to open a live conversation with a Mastodonian. We'll be happy to answer any questions you might have, or just talk you through a particular process. If for some reason we're unavailable then we'll get back to you as soon as possible.
+
+![Intercom window](imgs/intercom01.png)  
+Via this window you can also enquire about more formal training sessions which we'll be happy to discuss with you and schedule.
