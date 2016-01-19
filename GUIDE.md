@@ -3,13 +3,15 @@
 Witan is a tool for planners and policy makers to help form a better understanding of the data that drives their city.
 
 ---------------------
-## Prerequisites
-* A login is required for Witan. Currently, the best way to obtain one is to [contact us](mailto:witan@mastodonc.com) and we can facilitate, or alternatively, ask a manager.
-* ***Please understand that Witan is currently in a state of development and is prone to glitches and bugs. If you encounter anything unusual, please [contact us](mailto:witan@mastodonc.com) and let us know what happened.***
+***Please understand that Witan is currently in a state of development and is prone to glitches and bugs. If you encounter anything unusual, please [contact us](mailto:witan@mastodonc.com) and let us know what happened.***
 
 ## Signing in
 ![Witan login](imgs/login00.png)
 Enter an email address and password and press 'Sign In'. In the case of a lost password, click the 'forgotten password' link and it will send us an email message, asking for the password to be reset.
+
+## Signing up
+![Witan signup](imgs/login01.png)
+If you don't already have an account then you'll first need an invite code. These can be obtained by [emailing us](mailto:witan@mastodonc.com). Access is limited so you may be unable to receive a code straight-away. Once you do have an invite code, use the 'Create Account' button from the landing page to navigate to the correct screen. Enter your details (work email address, name and password) and create your account. You will be logged in immediately.
 
 ## Dashboard
 ![Witan dashboard](imgs/dash00.png)
