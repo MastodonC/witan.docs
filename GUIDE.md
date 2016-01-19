@@ -31,7 +31,7 @@ Whilst in early development, Witan only accepts uploads in CSV format and Projec
 Models represent the transformation process under which Data is processed in the pursuit of a particular outcome. For example, given an *Input* of a city's population figures, a Model could manipulate those figures using particular assumption about migration to predict growth over the next 10 years. A different Model could use a different assumption, or could focus on an entirely different prediction altogether.  
 
 #### Projections
-In Witan we use the term 'Projection' as an umbrella term to refer to the combination of a Model, it's configuration, a fixed set of Input Data and the resulting Output Data. We use this term because when thinking about a projection, in city planning terms, all of these parts are important to consider when evaluating the results. 
+In Witan we use the term 'Projection' as an umbrella term to refer to the combination of a Model, its configuration, a fixed set of Input Data and the resulting Output Data. We use this term because when thinking about a projection, in city planning terms, all of these parts are important to consider when evaluating the results. 
 
 ## Creating a Projection
 It's likely that when during the first encounter the Dashboard, it will be empty. To create a Projection, click on the green `+` button in the top-right corner. The following view will become available:
