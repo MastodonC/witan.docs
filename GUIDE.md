@@ -5,6 +5,15 @@ Witan is a tool for planners and policy makers to help form a better understandi
 ---------------------
 ***Please understand that Witan is currently in a state of development and is prone to glitches and bugs. If you encounter anything unusual, please [contact us](mailto:witan@mastodonc.com) and let us know what happened.***
 
+## Contents
+* [Signing in](#signing-in)
+* [Signing up](#signing-up)
+* [Dashboard](#dashboard)
+* [Creating a Projection](#creating-a-projection)
+* [Projection View](#projection)
+* [Running a Projection](#running-a-projection)
+* [Getting Help](#getting-help)
+
 ## Signing in
 ![Witan login](imgs/login00.png)
 Enter an email address and password and press 'Sign In'. In the case of a lost password, click the 'forgotten password' link and it will send us an email message, asking for the password to be reset.
