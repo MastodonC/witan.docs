@@ -5,7 +5,7 @@ Witan is a tool for planners and policy makers to help form a better understandi
 ---------------------
 ## Prerequisites
 * A login is required for Witan. Currently, the best way to obtain one is to [contact us](witan@mastodonc.com) and we can facilitate, or alternatively, ask a manager.
-* ***Please understand that Witan is currently in a state of development and is prone to glitches and bugs. If you encounter anything unusual, please [contact us](witan@mastodonc.com) and let us know what happened.***
+* ***Please understand that Witan is currently in a state of development and is prone to glitches and bugs. If you encounter anything unusual, please [contact us](mailto:witan@mastodonc.com) and let us know what happened.***
 
 ## Signing in
 ![Witan login](imgs/login00.png)
