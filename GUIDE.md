@@ -45,7 +45,7 @@ An additional description for the Projection.
 ##### Model
 The name and version of the Model to use.
 ##### Model Properties
-Some Models have properties that require setting. For example, in the image, the 'DCLG-based Housing Linked Model' requires a London borough to be selected.
+Some Models have properties that require setting. For example, in the image, the 'Housing-linked Ward Population Projection Model' requires a London borough, a fertility assumption (High, Standard or Low) and a variant (DCLG or Capped Household Size) to be selected.
 
 Once all the required inputs are filled, selecting the 'Create' will cause the application to load the newly created Projection.
 
