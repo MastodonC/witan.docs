@@ -43,7 +43,7 @@ Models represent the transformation process under which Data is processed in the
 In Witan we use the term 'Projection' as an umbrella term to refer to the combination of a Model, its configuration, a fixed set of Input Data and the resulting Output Data. We use this term because when thinking about a projection, in city planning terms, all of these parts are important to consider when evaluating the results. 
 
 ## Creating a Projection
-It's likely that when during the first encounter the Dashboard, it will be empty. To create a Projection, click on the green `+` button in the top-right corner. The following view will become available:
+During a first encounter with the Dashboard it will likely be empty. To create a Projection, click on the green `+` button in the top-right corner. The following view will become available:
 ![Witan create a projection](imgs/create00.png)  
 
 Fill in the details:
