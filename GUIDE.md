@@ -62,6 +62,10 @@ Clicking on the blue button will display the Data selection form for that catego
 
 From here there are two options; either select an existing Data item from the items listed (and confirm with the 'Use' button), or *upload* a new Data item. It's also possible to download an existing Data item, for use as a template or reference, by selecting it and then using the 'Download' button.
 
+![Projection - Uploading](imgs/upload00.png) 
+
+To upload a file, use the 'Choose File' button and select the desired data source. There is then an option to eithre give this data source a brand new name, or to use in an existing name in which case the version number of the existing data source will be incremented. Clicking 'Upload' will begin the process.
+
 #### Model
 ![Projection - Model](imgs/projection01.png)  
 The Model page displays information about the selected model, including a list of the Model Properties that were chosen when the Projection was created.
