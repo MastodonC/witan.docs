@@ -64,7 +64,7 @@ From here there are two options; either select an existing Data item from the it
 
 ![Projection - Uploading](imgs/upload00.png) 
 
-To upload a file, use the 'Choose File' button and select the desired data source. There is then an option to either give this data source a brand new name, or to use in an existing name in which case the version number of the existing data source will be incremented. Clicking 'Upload' will begin the process.
+To upload a file, use the 'Choose File' button and select the desired data source (must be a CSV file). Then choose to either give this data source a brand new name or to use an existing name (in which case the version number of the existing data source will be incremented). Clicking 'Upload' will begin the process.
 
 #### Model
 ![Projection - Model](imgs/projection01.png)  
