@@ -3,7 +3,7 @@
 Witan is a tool for planners and policy makers to help form a better understanding of the data that drives their city.
 
 ---------------------
-***Please understand that Witan is currently in a state of development and is prone to glitches and bugs. If you encounter anything unusual, please [contact us](mailto:witan@mastodonc.com) and let us know what happened.***
+***Please understand that Witan is currently in a state of development so there will be rough edges to the user experience, and the occasional glitch. If you encounter anything that seems different to how you would expect, or obviously buggy, please contact us by sending an email to [witan@mastodonc.com](mailto:witan@mastodonc.com), or using the in-app help feature.***
 
 ## Contents
 * [Signing in](#signing-in)
@@ -16,11 +16,17 @@ Witan is a tool for planners and policy makers to help form a better understandi
 
 ## Signing in
 ![Witan login](imgs/login00.png)
-Enter an email address and password and press 'Sign In'. In the case of a lost password, click the 'forgotten password' link and it will send us an email message, asking for the password to be reset.
+Enter an email address and password and press 'Sign In'. In the case of a lost password, click the 'forgotten password' link. This will open the default email client with a prepopulated email message, which you can then send, or copy to send in an email program of your choice.
 
 ## Signing up
 ![Witan signup](imgs/login01.png)  
-If you don't already have an account then you'll first need an invite code. These can be obtained by [emailing us](mailto:witan@mastodonc.com). Access is limited so you may be unable to receive a code straight-away. Once you do have an invite code, use the 'Create Account' button from the landing page to navigate to the correct screen. Enter your details (work email address, name and password) and create your account. You will be logged in immediately.
+If you don't already have an account then you'll first need an invite code. These can be obtained by [emailing us](mailto:witan@mastodonc.com).
+
+We're rolling out access in waves each week, so you may be need to wait a few days before you get you invite.
+
+Once you do have an invite code, use the 'Create Account' button from the landing page to navigate to the correct screen. Enter your details (work email address, name and password) and create your account. You will be logged in immediately.
+
+You will need to use the same email address the the invite was sent to - please contact us if you need to use a difference address.
 
 ## Dashboard
 ![Witan dashboard](imgs/dash00.png)
@@ -30,6 +36,7 @@ Witan pivots around a core set of primitives which should be familiar to most pe
 
 #### Data
 Data is the foundation substance of Witan and can represent a vast array of different information, from statistics to sensor outputs. Data can enter the system in one of two ways: 
+
 * *Uploaded and used as an* ***Input*** *for a Projection*
 * *Produced as an* ***Output*** *(result) *from a Projection*.
 ```html
