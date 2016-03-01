@@ -3,7 +3,7 @@
 Witan is a tool for planners and policy makers to help form a better understanding of the data that drives their city.
 
 ---------------------
-***Please understand that Witan is currently in a state of development and is prone to glitches and bugs. If you encounter anything unusual, please [contact us](mailto:witan@mastodonc.com) and let us know what happened.***
+***Please understand that Witan is currently in a state of development so there will be rough edges to the user experience, and the occasional glitch. If you encounter anything that seems different to how you would expect, or obviously buggy, please contact us by sending an email to [witan@mastodonc.com](mailto:witan@mastodonc.com), or using the in-app help feature.***
 
 ## Contents
 * [Signing in](#signing-in)
@@ -16,20 +16,34 @@ Witan is a tool for planners and policy makers to help form a better understandi
 
 ## Signing in
 ![Witan login](imgs/login00.png)
-Enter an email address and password and press 'Sign In'. In the case of a lost password, click the 'forgotten password' link and it will send us an email message, asking for the password to be reset.
+Enter an email address and password and press 'Sign In'. In the case of a lost password, click the 'forgotten password' link. This will open the default email client with a prepopulated email message, which you can then send, or copy to send in an email program of your choice.
 
 ## Signing up
 ![Witan signup](imgs/login01.png)  
-If you don't already have an account then you'll first need an invite code. These can be obtained by [emailing us](mailto:witan@mastodonc.com). Access is limited so you may be unable to receive a code straight-away. Once you do have an invite code, use the 'Create Account' button from the landing page to navigate to the correct screen. Enter your details (work email address, name and password) and create your account. You will be logged in immediately.
+If you don't already have an account then you'll first need an invite code. These can be obtained by [emailing us](mailto:witan@mastodonc.com).
+
+We're rolling out access in waves each week, so you may be need to wait a few days before you get you invite.
+
+Once you do have an invite code, use the 'Create Account' button from the landing page to navigate to the correct screen. Enter your details (work email address, name and password) and create your account. You will be logged in immediately.
+
+You will need to use the same email address the the invite was sent to - please contact us if you need to use a difference address.
 
 ## Dashboard
+
+If this is your first time using the dashboard, you're likely to see an empty set of projections, somewhat like the screen below:
+
+![Witan blank dashboard](imgs/dash-blank00.png)
+
+Once you've created your first few projections, it will look more like the screen below:
+
 ![Witan dashboard](imgs/dash00.png)
 The Dashboard displays a list of all the accessible *Projections*.
 
 Witan pivots around a core set of primitives which should be familiar to most people who've worked in city planning:
 
 #### Data
-Data is the foundation substance of Witan and can represent a vast array of different information, from statistics to sensor outputs. Data can enter the system in one of two ways: 
+Data is the foundation substance of Witan and can represent a vast array of different information, from statistics to sensor outputs. Data can enter the system in one of two ways:
+
 * *Uploaded and used as an* ***Input*** *for a Projection*
 * *Produced as an* ***Output*** *(result) *from a Projection*.
 ```html
@@ -40,7 +54,7 @@ Whilst in early development, Witan only accepts uploads in CSV format and Projec
 Models represent the transformation process under which Data is processed in the pursuit of a particular outcome. For example, given an *Input* of a city's population figures, a Model could manipulate those figures using particular assumption about migration to predict growth over the next 10 years. A different Model could use a different assumption, or could focus on an entirely different prediction altogether.  
 
 #### Projections
-In Witan we use the term 'Projection' as an umbrella term to refer to the combination of a Model, its configuration, a fixed set of Input Data and the resulting Output Data. We use this term because when thinking about a projection, in city planning terms, all of these parts are important to consider when evaluating the results. 
+In Witan we use the term 'Projection' as an umbrella term to refer to the combination of a Model, its configuration, a fixed set of Input Data and the resulting Output Data. We use this term because when thinking about a projection, in city planning terms, all of these parts are important to consider when evaluating the results.
 
 ## Creating a Projection
 During a first encounter with the Dashboard it will likely be empty. To create a Projection, click on the green `+` button in the top-right corner. The following view will become available:
@@ -67,11 +81,11 @@ The Inputs page displays a list of Input *Categories*, which are defined by the 
 
 Clicking on the blue button will display the Data selection form for that category.
 
-![Projection - Inputs, data selection](imgs/projection03.png) 
+![Projection - Inputs, data selection](imgs/projection03.png)
 
 From here there are two options; either select an existing Data item from the items listed (and confirm with the 'Use' button), or *upload* a new Data item. It's also possible to download an existing Data item, for use as a template or reference, by selecting it and then using the 'Download' button.
 
-![Projection - Uploading](imgs/upload00.png) 
+![Projection - Uploading](imgs/upload00.png)
 
 To upload a file, use the 'Choose File' button and select the desired data source (must be a CSV file). Then choose to either give this data source a brand new name or to use an existing name (in which case the version number of the existing data source will be incremented). Clicking 'Upload' will begin the process.
 
@@ -86,7 +100,7 @@ Once a Projection is created, Model Properties cannot be adjusted. This is tempo
 ![Projection - Outputs](imgs/projection02.png)  
 The Outputs page displays a list of the results that were generated the last time the Model was run. If, as in the image, the Model has yet to be run - or if it's currently being run and is 'In Progress' - then a helpful message is displayed.
 
-Once the Model has been run, each Output is listed and download buttons with the relevant file types are displayed (e.g. "CSV", "XLSX"). 
+Once the Model has been run, each Output is listed and download buttons with the relevant file types are displayed (e.g. "CSV", "XLSX").
 
 ## Running a Projection
 It's often the case that after creating a new Projection, Data items are required before it can be run. These are clearly indicated by the red lettering - "No data input specified" - beneath an Input Category description. Once all Input Categories have appropriate Data items selected *or* there has been a change - a different Data item has been selected since the last run - a new dialog will appear:
